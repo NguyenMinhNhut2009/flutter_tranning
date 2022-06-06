@@ -1,6 +1,8 @@
 import 'package:checkbox_formfield/checkbox_icon_formfield.dart';
 import 'package:checkbox_formfield/checkbox_list_tile_formfield.dart';
 import 'package:flutter/material.dart';
+import 'package:project/Login.dart';
+import 'package:project/acountsuccess.dart';
 import 'package:project/onBording2.dart';
 
 const icGoogle = "assets/images/ic_google.png";
@@ -125,7 +127,7 @@ Widget _buildBody(BuildContext context) {
             if (value!) {
               return null;
             } else {
-              return 'Not be empty';
+              return 'Can not be empty';
             }
           },
           onChanged: (value) {
@@ -157,7 +159,7 @@ Widget _buildBody(BuildContext context) {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const OnBoarding2()));
+                            builder: (context) => const AccountSuccess()));
                   },
                   color: const Color(0xFF101010),
                   child: Padding(
@@ -218,7 +220,7 @@ Widget _buildBody(BuildContext context) {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const RegisterPage()));
+                          builder: (context) => const LoginPage()));
                 },
               ),
             ],
