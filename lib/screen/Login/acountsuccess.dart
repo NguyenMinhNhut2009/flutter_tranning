@@ -13,11 +13,11 @@ class _AccountSuccessState extends State<AccountSuccess> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: const Color(0xFFFFFFFF),
       body: SafeArea(
         child: Column(children: [
           Padding(
-            padding: EdgeInsets.only(left: 84, right: 84, top: 100),
+            padding: const EdgeInsets.only(left: 84, right: 84, top: 100),
             child: Image.asset(
               imgAccount,
               width: 208,
@@ -51,12 +51,12 @@ class _AccountSuccessState extends State<AccountSuccess> {
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Color(0xFF101010),
+                color: const Color(0xFF101010),
                 borderRadius: BorderRadius.circular(100),
               ),
               alignment: Alignment.center,
               child: Padding(
-                padding: EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Text(
                   "Let’s Search Shoes!".toUpperCase(),
                   textAlign: TextAlign.center,

@@ -1,9 +1,9 @@
 import 'package:checkbox_formfield/checkbox_icon_formfield.dart';
 import 'package:checkbox_formfield/checkbox_list_tile_formfield.dart';
 import 'package:flutter/material.dart';
-import 'package:project/Login.dart';
-import 'package:project/acountsuccess.dart';
-import 'package:project/onBording2.dart';
+
+import 'Login.dart';
+import 'acountsuccess.dart';
 
 const icGoogle = "assets/images/ic_google.png";
 const icFacebook = "assets/images/ic_facebook.png";
@@ -26,10 +26,12 @@ class _RegisterPageState extends State<RegisterPage> {
 }
 
 Widget _buildBody(BuildContext context) {
+  // ignore: non_constant_identifier_names
   TextEditingController NameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController userController = TextEditingController();
 
+  // ignore: unused_local_variable
   final _formKey = GlobalKey<FormState>();
   bool? checkboxIconFormFieldValue = false;
 

@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:project/register.dart';
+import 'package:project/screen/Home/home.dart';
+import 'package:project/screen/Login/register.dart';
 
 const icGoogle = "assets/images/ic_google.png";
 const icFacebook = "assets/images/ic_facebook.png";
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
+
+  // String email;
+  // String
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -22,14 +26,30 @@ class _LoginPageState extends State<LoginPage> {
 }
 
 Widget _buildBody(BuildContext context) {
+  // ignore: unused_local_variable
+  bool _isVaild = false;
+
+  // ignore: unused_local_variable
+  String _email;
+  // ignore: unused_local_variable
+  String _password;
+  // ignore: non_constant_identifier_names, unused_local_variable
+  bool _ShowPassword = true;
+  // ignore: unused_local_variable
+  bool _isEmailVaild = false;
+  // ignore: unused_local_variable
+  bool _isPasswordVaild = false;
+
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
   return SingleChildScrollView(
     child: Column(
       children: [
         const Padding(
           padding: EdgeInsets.only(
             top: 94,
+            right: 280,
           ),
           child: Text(
             'Login',
@@ -42,8 +62,7 @@ Widget _buildBody(BuildContext context) {
         const Padding(
           padding: EdgeInsets.only(
             top: 10,
-            left: 30,
-            right: 30,
+            right: 90,
           ),
           child: Text(
             'Please sign up to your Shoesly Account',
@@ -55,7 +74,7 @@ Widget _buildBody(BuildContext context) {
           ),
         ),
         const Padding(
-          padding: EdgeInsets.only(left: 30, top: 20, right: 30),
+          padding: EdgeInsets.only(left: 30, top: 70, right: 30),
           child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -71,6 +90,7 @@ Widget _buildBody(BuildContext context) {
           child: TextField(
             controller: nameController,
             decoration: const InputDecoration(
+              // border: BorderRadius.,
               hintText: 'pristia@gmail.com',
             ),
           ),
@@ -90,32 +110,40 @@ Widget _buildBody(BuildContext context) {
         Container(
           padding: const EdgeInsets.only(left: 30, right: 30),
           child: TextField(
-            controller: nameController,
+            controller: passwordController,
             decoration: const InputDecoration(
-              hintText: 'secret1234567',
-            ),
+                hintText: 'secret1234567', suffix: Icon(Icons.visibility)),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30)
-              .copyWith(bottom: 20, top: 190),
-          child: Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: const Color(0xFF101010),
-              borderRadius: BorderRadius.circular(100),
-            ),
-            alignment: Alignment.center,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                'Login'.toUpperCase(),
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
-                ),
+          padding: const EdgeInsets.only(top: 270),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomePage(),
+                  ),
+                  (route) => false);
+            },
+            child: Container(
+              margin: const EdgeInsets.symmetric(
+                horizontal: 30,
               ),
+              height: 50,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: Center(
+                  child: Text(
+                'Log In'.toUpperCase(),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText1!
+                    .copyWith(color: Colors.white, fontSize: 14),
+              )),
             ),
           ),
         ),
@@ -138,7 +166,8 @@ Widget _buildBody(BuildContext context) {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
+          padding: const EdgeInsets.only(left: 30, right: 30, top: 10),
+          // ignore: avoid_unnecessary_containers
           child: Container(
             child: Row(
               children: [
@@ -146,7 +175,7 @@ Widget _buildBody(BuildContext context) {
                   'Join with us, ',
                   style: TextStyle(
                     fontSize: 14,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
                 TextButton(
@@ -155,7 +184,7 @@ Widget _buildBody(BuildContext context) {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      color: Colors.red,
+                      color: Colors.black,
                     ),
                   ),
                   onPressed: () {
@@ -173,51 +202,4 @@ Widget _buildBody(BuildContext context) {
       ],
     ),
   );
-}
-
-class MyButtonSocial extends StatelessWidget {
-  const MyButtonSocial({
-    Key? key,
-    required this.icon,
-    required this.text,
-  }) : super(key: key);
-
-  final String icon;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(0),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(100),
-        border: Border.all(color: const Color(0xFFE7E7E7)),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                color: const Color(0xFFF3F3F3),
-              ),
-              padding: const EdgeInsets.all(10),
-              child: Image.asset(
-                icon,
-                width: 10.0,
-                height: 10.0,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 8),
-              child: Text(text),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }

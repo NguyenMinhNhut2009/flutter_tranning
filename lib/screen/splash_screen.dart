@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:project/main.dart';
 
+import 'onBording/onBoarding.dart';
+
 // ignore: constant_identifier_names
 const ic_Splach = "assets/images/ic_splach.png";
 
@@ -25,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Future navigationPage() async {
     return Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const DemoScreen()),
+      MaterialPageRoute(builder: (context) => const OnBoarding()),
     );
   }
 
