@@ -73,7 +73,6 @@ Widget _buildBody(BuildContext context) {
                 image: DecorationImage(
                     image: AssetImage("assets/images/imgHome.png"),
                     fit: BoxFit.cover),
-                // borderRadius: BorderRadius.circular(8),
               ),
             ),
             Positioned(
@@ -121,27 +120,80 @@ Widget _buildBody(BuildContext context) {
             ),
           ],
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Text(
-              "Brands",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w700,
-                color: Color(0xFF101010),
+        Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text(
+                "Brands",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF101010),
+                ),
               ),
-            ),
-            Text(
-              "SEE ALL",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-                color: Color(0xFFB7B7B7),
+              Text(
+                "SEE ALL",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFFB7B7B7),
+                ),
+                textAlign: TextAlign.right,
               ),
-              textAlign: TextAlign.right,
-            ),
-          ],
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text(
+                "Special For Your",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF101010),
+                ),
+              ),
+              Text(
+                "SEE ALL",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFFB7B7B7),
+                ),
+                textAlign: TextAlign.right,
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text(
+                "Most Popular",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF101010),
+                ),
+              ),
+              Text(
+                "SEE ALL",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFFB7B7B7),
+                ),
+                textAlign: TextAlign.right,
+              ),
+            ],
+          ),
         ),
       ]),
     ),

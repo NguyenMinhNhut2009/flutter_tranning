@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   intro_slider: ^2.4.3
+  
   introduction_screen: ^2.1.0
   flutter_onboard: ^2.0.0
   checkbox_formfield: ^0.2.0
