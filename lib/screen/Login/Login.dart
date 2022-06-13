@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/screen/Home/home.dart';
+import 'package:project/screen/Home/main_home.dart';
 import 'package:project/screen/Login/register.dart';
 
 const icGoogle = "assets/images/ic_google.png";
@@ -122,7 +123,7 @@ Widget _buildBody(BuildContext context) {
               Navigator.pushAndRemoveUntil(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomePage(),
+                    builder: (context) => const MainHomePage(),
                   ),
                   (route) => false);
             },

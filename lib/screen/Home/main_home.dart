@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:project/WishList/wishList.dart';
 import 'package:project/screen/Discover/discover.dart';
 import 'package:project/screen/Home/home.dart';
 import 'package:project/screen/Order/order.dart';
 import 'package:project/screen/Profile/profile.dart';
+
+import '../WishList/wishList.dart';
 
 class MainHomePage extends StatefulWidget {
   const MainHomePage({Key? key}) : super(key: key);
@@ -57,7 +58,6 @@ class _MainHomePageState extends State<MainHomePage>
 
   @override
   void initState() {
-
     _menuItem = itemList[0];
     super.initState();
   }
@@ -68,7 +68,6 @@ class _MainHomePageState extends State<MainHomePage>
     _pageController.dispose();
     super.dispose();
   }
-
 
   @override
   Widget build(BuildContext context) {

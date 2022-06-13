@@ -108,15 +108,6 @@ class _DiscoverPageState extends State<DiscoverPage>
                       ),
                     ]),
               ),
-              // Container(
-              //   padding: const EdgeInsets.only(left: 20),
-              //   height: 300,
-              //   width: double.maxFinite,
-              //   child: TabBarView(
-              //     controller: _tabController,
-              //     children: [],
-              //   ),
-              // ),
             ],
           ),
         ),
